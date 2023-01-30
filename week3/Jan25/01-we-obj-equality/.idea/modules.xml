@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/01-we-obj-equality.iml" filepath="$PROJECT_DIR$/.idea/01-we-obj-equality.iml" />
+      <module fileurl="file://$PROJECT_DIR$/solved/dogequality.iml" filepath="$PROJECT_DIR$/solved/dogequality.iml" />
+      <module fileurl="file://$PROJECT_DIR$/starter/dogequality (1).iml" filepath="$PROJECT_DIR$/starter/dogequality (1).iml" />
+    </modules>
+  </component>
+</project>
