@@ -6,6 +6,7 @@ import org.springframework.web.server.ResponseStatusException;
 @RestController
 public class MonthController {
     @RequestMapping(value="/month/{monthNumber}", method=RequestMethod.GET)
+    @ResponseStatus(value = HttpStatus.OK)
     public String getMonth(@PathVariable String monthNumber) {
         switch (monthNumber) {
             case "1":
