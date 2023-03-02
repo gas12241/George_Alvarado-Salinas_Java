@@ -178,41 +178,83 @@ public class Customer implements Serializable {
     }
 
     /**
-     * Getter for the city
-     * @return
+     * Getter for the city of a Customer Object.
+     * @return Returns a String of the city of
+     *         a Customer Object.
      */
     public String getCity() {
         return city;
     }
 
+    /**
+     * Setter for the city of a Customer Object.
+     * @param city String used to set the city
+     *             for a Customer Object.
+     */
     public void setCity(String city) {
         this.city = city;
     }
 
+    /**
+     * Getter for the state of a Customer Object.
+     * @return Returns a String of the state of
+     *         a Customer Object.
+     */
     public String getState() {
         return state;
     }
 
+    /**
+     * Setter for the state of a Customer Object.
+     * @param state String used to set the state
+     *              of a Customer Object.
+     */
     public void setState(String state) {
         this.state = state;
     }
 
+    /**
+     * Getter for the postalCode of a Customer Object.
+     * @return Returns the String of the postalCode
+     *         of the Customer Object.
+     */
     public String getPostalCode() {
         return postalCode;
     }
 
+    /**
+     * Setter for the postalCode of the Customer Object.
+     * @param postalCode String used to set the postalCode
+     *                   for the Customer Object.
+     */
     public void setPostalCode(String postalCode) {
         this.postalCode = postalCode;
     }
 
+    /**
+     * Getter for the Country of a Customer Object.
+     * @return Returns the String of the country
+     *         of the Customer Object.
+     */
     public String getCountry() {
         return country;
     }
 
+    /**
+     * Setter for the country of a Customer Object.
+     * @param country String used to set the country
+     *                of a Customer object.
+     */
     public void setCountry(String country) {
         this.country = country;
     }
 
+    /**
+     * equals for the Customer Object.
+     * @param o Object o used to test equality.
+     * @return Returns true if the object being compared
+     *         to is equal to the object calling the method.
+     */
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
