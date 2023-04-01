@@ -19,10 +19,14 @@ public class Customer implements Serializable {
      * Fields for a Customer Object.
      */
     @Id
-    // @Column(name = "customer_id")
+    @Column(name = "customer_id")
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
+    private Integer customerId;
+
+    @Column(name = "first_name")
     private String firstName;
+
+    @Column(name = "last_name")
     private String lastName;
     private String email;
     private String company;
@@ -31,6 +35,7 @@ public class Customer implements Serializable {
     private String address2;
     private String city;
     private String state;
+    @Column(name = "postal_code")
     private String postalCode;
     private String country;
 
@@ -38,17 +43,17 @@ public class Customer implements Serializable {
      * Getter for the Id of a Customer Object.
      * @return Returns an Integer, id, for a Customer Object.
      */
-    public Integer getId() {
-        return id;
+    public Integer getCustomerId() {
+        return customerId;
     }
 
     /**
      * Setter for the Id of a Customer Object.
-     * @param id Integer parameter that will be use to set
-     *           the Id of the Customer Object.
+     * @param customerId Integer parameter that will be use to set
+     *                   the Id of the Customer Object.
      */
-    public void setId(Integer id) {
-        this.id = id;
+    public void setCustomerId(Integer customerId) {
+        this.customerId = customerId;
     }
 
     /**
@@ -260,18 +265,18 @@ public class Customer implements Serializable {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Customer customer = (Customer) o;
-        return Objects.equals(getId(), customer.getId()) && Objects.equals(getFirstName(), customer.getFirstName()) && Objects.equals(getLastName(), customer.getLastName()) && Objects.equals(getEmail(), customer.getEmail()) && Objects.equals(getCompany(), customer.getCompany()) && Objects.equals(getPhone(), customer.getPhone()) && Objects.equals(getAddress1(), customer.getAddress1()) && Objects.equals(getAddress2(), customer.getAddress2()) && Objects.equals(getCity(), customer.getCity()) && Objects.equals(getState(), customer.getState()) && Objects.equals(getPostalCode(), customer.getPostalCode()) && Objects.equals(getCountry(), customer.getCountry());
+        return Objects.equals(getCustomerId(), customer.getCustomerId()) && Objects.equals(getFirstName(), customer.getFirstName()) && Objects.equals(getLastName(), customer.getLastName()) && Objects.equals(getEmail(), customer.getEmail()) && Objects.equals(getCompany(), customer.getCompany()) && Objects.equals(getPhone(), customer.getPhone()) && Objects.equals(getAddress1(), customer.getAddress1()) && Objects.equals(getAddress2(), customer.getAddress2()) && Objects.equals(getCity(), customer.getCity()) && Objects.equals(getState(), customer.getState()) && Objects.equals(getPostalCode(), customer.getPostalCode()) && Objects.equals(getCountry(), customer.getCountry());
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(getId(), getFirstName(), getLastName(), getEmail(), getCompany(), getPhone(), getAddress1(), getAddress2(), getCity(), getState(), getPostalCode(), getCountry());
+        return Objects.hash(getCustomerId(), getFirstName(), getLastName(), getEmail(), getCompany(), getPhone(), getAddress1(), getAddress2(), getCity(), getState(), getPostalCode(), getCountry());
     }
 
     @Override
     public String toString() {
         return "Customer{" +
-                "id=" + id +
+                "customerId=" + customerId +
                 ", firstName='" + firstName + '\'' +
                 ", lastName='" + lastName + '\'' +
                 ", email='" + email + '\'' +

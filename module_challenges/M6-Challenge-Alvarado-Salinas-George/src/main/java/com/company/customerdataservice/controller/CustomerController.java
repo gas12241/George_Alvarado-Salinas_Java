@@ -69,13 +69,8 @@ public class CustomerController {
      */
     @GetMapping("/customers/{id}")
     @ResponseStatus(HttpStatus.ACCEPTED)
-    public Customer getCustomerById(@PathVariable int id) {
-        Optional<Customer> returnVal = repo.findById(id);
-        if (returnVal.isPresent()) {
-            return returnVal.get();
-        } else {
-            return null;
-        }
+    public Optional<Customer> getCustomerById(@PathVariable int id) {
+        return repo.findById(id);
     }
 
     /**

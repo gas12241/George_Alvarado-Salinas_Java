@@ -93,7 +93,7 @@ public class CustomerControllerTest {
         inputCustomer.setState("California");
         inputCustomer.setPostalCode("90210");
         inputCustomer.setCountry("USA");
-        inputCustomer.setId(24);
+        inputCustomer.setCustomerId(24);
 
         String inputJson = mapper.writeValueAsString(inputCustomer);
 
@@ -131,7 +131,7 @@ public class CustomerControllerTest {
         outputCustomer.setState("California");
         outputCustomer.setPostalCode("90210");
         outputCustomer.setCountry("USA");
-        outputCustomer.setId(24);
+        outputCustomer.setCustomerId(24);
 
         String outputJson = mapper.writeValueAsString(outputCustomer);
         mockMvc.perform(MockMvcRequestBuilders.get("/customers/24")).andDo(print()).andExpect(status().isAccepted());
@@ -152,7 +152,7 @@ public class CustomerControllerTest {
         outputCustomer.setState("California");
         outputCustomer.setPostalCode("90210");
         outputCustomer.setCountry("USA");
-        outputCustomer.setId(24);
+        outputCustomer.setCustomerId(24);
         String outputJson = mapper.writeValueAsString(outputCustomer);
 //        mockMvc.perform(get("/customers/state/California"))
 //                .andDo(print())
